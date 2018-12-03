@@ -300,9 +300,7 @@ class FlexibleModal extends Component {
             ref={dragArea => {
               this.dragArea = dragArea;
             }}
-          >
-          
-          </div>
+          />
           {this.props.children}
           <div
             onMouseDown={this.onMouseDown.bind(this)}
