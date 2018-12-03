@@ -290,7 +290,7 @@ class FlexibleModal extends Component {
             this.node_modal = node;
           }}
         >
-          {this.props.children}
+          
           <div
             onMouseDown={this.onMouseDown.bind(this)}
             className="flexible-modal-drag-area"
@@ -300,7 +300,9 @@ class FlexibleModal extends Component {
             ref={dragArea => {
               this.dragArea = dragArea;
             }}
-          />
+          >
+            {this.props.header}
+          </div>
           <div
             onMouseDown={this.onMouseDown.bind(this)}
             className="flexible-modal-drag-area-left"
@@ -331,6 +333,7 @@ class FlexibleModal extends Component {
               this.dragArea4 = dragArea;
             }}
           />
+          {this.props.children}
           {!disableResize &&
             <Resizer updateStateResizing={this.updateStateResizing} />}
         </Modal>
